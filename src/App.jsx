@@ -20,7 +20,7 @@ function mapItems(some){
 
 const App = () => {
   const [mobileBar, setMobileBar] = useState(false);
-  const [items, setItems] = useLocalStorage('user');
+  const [items, setItems] = useLocalStorage('personal_journal_user');
   const [selectedItem, setSelectedItem] = useState(null);
 
   const handleMobileBar = () => {

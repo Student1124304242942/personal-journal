@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 export function useLocalStorage(key) {
     const [data, setData] = useState(() => {
         const storedData = localStorage.getItem(key);
-        return storedData ? JSON.parse(storedData) : []; // Инициализируйте пустым массивом, если нет данных
+        return storedData ? JSON.parse(storedData) : []; 
     });
 
     useEffect(() => {
