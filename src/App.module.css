@@ -1,0 +1,25 @@
+.main {
+  display: grid;
+  grid-template-columns: auto 320px minmax(400px, 1300px) auto;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  '. sidebar body .';
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.body {
+  grid-area: body;
+}
+
+@media(max-width: 767px){
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    'body';
+  }   
+}
