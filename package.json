@@ -2,7 +2,7 @@
   "name": "my-project",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Student1124304242942.github.io/personal-journal",
+  "homepage": "https://Student1124304242942/personal-journal",
   "type": "module",
   "scripts": {
     "dev": "vite",
