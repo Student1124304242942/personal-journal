@@ -75,7 +75,7 @@ const JournalOffer = ({onSubmit, data, onDeleteItem}) => {
         ['bg-[#181818] border-white border-solid border-2 w-[100%] py-[10px]']: isValid.title,
         [' bg-[red] transition-[0.5s] border-2 border-black border-solid w-[100%]']: !isValid.title
       })} onChange={onChange}/>
-          {data?.id &&  <button onClick ={() => onDeleteItem(data.id)}><img src='/input.svg' className='rounded-[100px] border-[1px] border-[#FFFFFF] border-solid gap-[8px] opacity-[40%] w-[30px] h-[30px]'/></button>}
+          {data?.id &&  <button onClick ={() => onDeleteItem(data.id)}><img src='personal-journal/input.svg' className='rounded-[100px] border-[1px] border-[#FFFFFF] border-solid gap-[8px] opacity-[40%] w-[30px] h-[30px]'/></button>}
         </div>
         <div className='w-[100%] flex flex-col gap-[5px] text-black'>
           <input type="date" name='date' ref={dateRef} className={classNames({

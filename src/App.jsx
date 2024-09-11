@@ -50,19 +50,19 @@ const App = () => {
   };
 
   return ( 
-    <div className='min-h-full'>
-      <div className={cl(styles.main, 'pt-[10px]')}>
+    <div className='relative min-w-full min-h-[100vh] flex flex-col  items-center'>
+      <div className={cl(styles.main, 'pt-[10px] min-w-full')}>
         <div className={cl('md:hidden block absolute w-[100%] min-h-[100vh] bg-[#181818] z-10', {
           ['-left-[100%]']:!mobileBar,
           ['left-0']: mobileBar
         })}>
           <div className='relative'>
-            <div className='cursor-pointer absolute top-[10px] right-[10px]' onClick={handleMobileBar}>
-              <img src="close.svg" alt="" />  
+            <div className='cursor-pointer absolute  top-[10px] right-[10px] hover:bg-[#f1f1f1f1] rounded-[50%]' onClick={handleMobileBar}>
+              <img src="personal-journal/close.svg" alt="" />  
             </div>
             <Leftpanel>
                 <Header/>
-                <JournalList items={mapItems(items)} setItem={setSelectedItem}/>
+                <JournalList  mobileItem={handleMobileBar} items={mapItems(items)} setItem={setSelectedItem}/>
             </Leftpanel>
           </div>
         </div>
@@ -70,7 +70,7 @@ const App = () => {
           <Leftpanel>
               <Header/>
               <AddJournalButton onClick = {() => setSelectedItem(null)}/>
-              <JournalList mobileItem={handleMobileBar} items={mapItems(items)} setItem={setSelectedItem}/>
+              <JournalList  items={mapItems(items)} setItem={setSelectedItem}/>
           </Leftpanel>
         </div>
         <div className={cl(styles.body)}>
@@ -82,14 +82,12 @@ const App = () => {
           </Body>
         </div>
       </div>
-      <div className='w-full flex justify-center min-h-full'>
-        <button onClick={handleMobileBar} className='flex py-[5px] w-[130px] rounded-[5px] items-center justify-between md:hidden text-white text-[18px] bg-blue-500 hover:bg-blue-700 sticky top-[50%] bottom-0'>
-          <img src="menu.svg" alt=""  className='ml-[5px]'/>
-          <div className='mr-[5px]'>
+      <button onClick={handleMobileBar} className=' absolute bottom-[10px]  flex py-[5px] w-[130px] rounded-[5px] items-center justify-between md:hidden text-white text-[18px] bg-blue-500 hover:bg-blue-700'>
+          <img src="personal-journal/menu.svg" alt="" className='ml-[5px]'/>
+          <div className='mr-[5px] uppercase'>
             memories
           </div>
         </button>
-      </div>
     </div>
   )
 }
