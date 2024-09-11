@@ -58,7 +58,7 @@ const App = () => {
         })}>
           <div className='relative'>
             <div className='cursor-pointer absolute  top-[10px] right-[10px] hover:bg-[#f1f1f1f1] rounded-[50%]' onClick={handleMobileBar}>
-              <img src="personal-journal/close.svg" alt="" />  
+              <img src="/close.svg" alt="" />  
             </div>
             <Leftpanel>
                 <Header/>
@@ -83,7 +83,7 @@ const App = () => {
         </div>
       </div>
       <button onClick={handleMobileBar} className=' absolute bottom-[10px]  flex py-[5px] w-[130px] rounded-[5px] items-center justify-between md:hidden text-white text-[18px] bg-blue-500 hover:bg-blue-700'>
-          <img src="personal-journal/menu.svg" alt="" className='ml-[5px]'/>
+          <img src="/menu.svg" alt="" className='ml-[5px]'/>
           <div className='mr-[5px] uppercase'>
             memories
           </div>
